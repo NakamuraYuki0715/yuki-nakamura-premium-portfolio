@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #08090D;
+    --bg-section: #0D1015;
+    --text-main: #F5F4F0;
+    --text-sub: #A7A7AE;
+    --border-color: rgba(255, 255, 255, 0.14);
+    --accent: #8B83FF;
+    --accent-glow: rgba(139, 131, 255, 0.25);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: var(--bg-main);
+  }
+
+  ::selection {
+    background-color: #8B83FF;
+    color: #08090D;
+  }
+}
+
+.font-serif-cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090D;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 131, 255, 0.6);
+}
+
+/* Smooth Image Reveal */
+.image-reveal-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.image-reveal-wrapper img {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+.image-reveal-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Noise overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
