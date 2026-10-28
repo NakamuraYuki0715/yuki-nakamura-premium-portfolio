@@ -164,7 +164,7 @@ export default function Home() {
       {/* 3. Hero Section (Image 1: 01-hero.png) */}
       <section
         id="hero"
-        className="relative w-full h-[100svh] min-h-[600px] flex items-center justify-center overflow-hidden"
+        className="relative w-full h-[100svh] min-h-[620px] flex items-end md:items-center justify-center overflow-hidden pb-14 md:pb-0"
       >
         {/* Background Visual with Parallax */}
         <div
@@ -179,32 +179,32 @@ export default function Home() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-right md:object-center filter brightness-[0.78] contrast-[1.05]"
+            className="object-cover object-[68%_18%] md:object-center filter brightness-[0.88] md:brightness-[0.78] contrast-[1.05]"
           />
-          {/* Subtle Multi-layer Cinematic Overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08090D]/95 via-[#08090D]/75 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#08090D] via-transparent to-[#08090D]/50"></div>
+          {/* Multi-layer Cinematic Overlay: Adjusted for mobile text readability while keeping PC identical */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#08090D] via-[#08090D]/70 via-40% to-transparent md:bg-gradient-to-r md:from-[#08090D]/95 md:via-[#08090D]/75 md:to-transparent"></div>
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#08090D] via-transparent to-[#08090D]/50"></div>
           <div className="absolute inset-0 bg-noise opacity-40 pointer-events-none"></div>
         </div>
 
         {/* Content Container */}
         <div className="relative max-w-7xl w-full mx-auto px-5 sm:px-6 md:px-12 z-10 pt-16 sm:pt-20">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-5 sm:mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-4 sm:mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#8B83FF] animate-pulse"></span>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] text-[#A7A7AE] font-poppins font-medium">
                 Web Design × Front-end Development
               </p>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight text-[#F5F4F0] leading-[1.18] sm:leading-[1.15] mb-5 sm:mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight text-[#F5F4F0] leading-[1.18] sm:leading-[1.15] mb-4 sm:mb-6">
               想いを、<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F5F4F0] via-[#F5F4F0] to-[#8B83FF]">
                 伝わるデザインへ。
               </span>
             </h1>
 
-            <p className="text-xs sm:text-sm md:text-base text-[#A7A7AE] leading-relaxed mb-8 sm:mb-10 max-w-lg font-light">
+            <p className="text-xs sm:text-sm md:text-base text-[#A7A7AE] leading-relaxed mb-6 sm:mb-10 max-w-lg font-light">
               見た人の心を動かす。<br className="hidden sm:inline" />
               美しくて、使いやすいWebサイトをつくります。
             </p>
@@ -230,7 +230,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none z-10 opacity-70">
+        <div className="hidden sm:flex absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex-col items-center pointer-events-none z-10 opacity-70">
           <span className="text-[9px] uppercase tracking-[0.3em] text-[#A7A7AE] mb-2 font-mono">SCROLL</span>
           <div className="w-[1px] h-8 bg-gradient-to-b from-[#8B83FF] to-transparent animate-pulse"></div>
         </div>
